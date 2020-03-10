@@ -10,6 +10,8 @@
 
 ### Association
 - has_many :groups through :groups_users
+- has_many :groups_users
+- has_many :messages
 
 ## groupsテーブル
 
@@ -18,8 +20,9 @@
 |name|string|null: false unique: true|
 
 ### Association
-has_many :users thorugh :groups_users
-
+- has_many :users thorugh :groups_users
+- has_many :groups_users
+- has_many :messages
 
 ## groups_usersテーブル
 
@@ -31,7 +34,6 @@ has_many :users thorugh :groups_users
 ### Association
 - belongs_to :group
 - belongs_to :user
-- has_many :messages
 
 ## messagesテーブル
 
@@ -42,4 +44,5 @@ has_many :users thorugh :groups_users
 |group_user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups_user
+- belongs_to :user
+- belongs_to :group
