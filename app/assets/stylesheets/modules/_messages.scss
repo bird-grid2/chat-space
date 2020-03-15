@@ -49,25 +49,29 @@
   margin: 0px auto;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  color: #ffffff;
   &__name{
     font-size: 16px;
     text-align: center;
     line-height: 22px;
-    color: #fff;
   }
   &__icons{
     width: 60px;
-    background-color: #fbfb;
     display: flex;
     justify-content: flex-end;
-    line-height: 22px;
+    align-items: center;
     &--edit{
+      text-decoration: none;
       display: block;
+      margin-right: 5px;
+      color: #ffffff;
     }
     &--cog{
+      text-decoration: none;
       display: block;
+      color: #ffffff;
     }
-
   }
   
 }
