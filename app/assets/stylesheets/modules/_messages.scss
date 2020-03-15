@@ -57,6 +57,17 @@
   }
   &__icons{
     width: 60px;
-    background-color: #fff;
+    background-color: #fbfb;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 22px;
+    &--edit{
+      display: block;
+    }
+    &--cog{
+      display: block;
+    }
+
   }
+  
 }
