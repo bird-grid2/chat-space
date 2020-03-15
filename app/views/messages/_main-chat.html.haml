@@ -1,4 +1,13 @@
 .main-chat
   .main-chat__group-info
+    .main-chat__group-info__content
+      .main-chat__group-info__content--name
+        %p
+          test
+      .main-chat__group-info__content--member
+        %p
+          member: yoshipon
+    = link_to "#", class: "main-chat__group-info__btn" do
+      Edit  
   .main-chat__message-list
   .main-chat__message-form
