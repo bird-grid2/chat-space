@@ -4,32 +4,16 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "far fa-edit top-items__icons--edit" do
+        = link_to new_group_path, class: "far fa-edit top-items__icons--edit" do
           = icon('far', 'fa-edit')
           %span<>
         = link_to edit_user_path(current_user), class: "fas fa-cog top-items__icons--cog" do
           = icon('fas', 'fa-cog')
   .side-bar__group-list
-    .side-bar__group-list__group
-      .side-bar_group-list__group--name
-        %p 
-          tech::expert
-      .side-bar__group-list__group--message
-        %p
-          まだメッセージがありません
-    .side-bar__group-list__group
-      .side-bar_group-list__group--name
-        %p 
-          tech::camp
-      .side-bar__group-list__group--message
-        %p
-          まだメッセージがありません
-    .side-bar__group-list__group
-      .side-bar_group-list__group--name
-        %p 
-          十天衆
-      .side-bar__group-list__group--message
-        %p
-          まだメッセージがありません
-      
-      
+    - current_user.groups.each do |group|
+      .side-bar__group-list__group
+        = link_to '#', class: 'group' do
+          .side-bar__group-list__group--name
+            =group.name
+          .side-bar__group-list__group--message
+            まだメッセージがありません
