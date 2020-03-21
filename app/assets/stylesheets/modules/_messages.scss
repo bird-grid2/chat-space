@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 $first-color: #ffffff;
@@ -25,15 +26,16 @@ $fourth-color: #999999;
     background-color: #2f3e51;
     align-items: center;
     padding: 20px;
-    color: $first-color;
     &__group{
       padding-bottom: 40px;
       &--name{
         font-size: 15px;
+        color: $first-color;
       }
       &--message{
         font-size: 11px;
         margin-top: 5px;
+        color: $first-color;
       }
     }
   }
