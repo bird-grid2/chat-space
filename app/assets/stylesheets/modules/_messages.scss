@@ -110,38 +110,50 @@ $fourth-color: #999999;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &__input-form{
+    &__input--form{
       height: 50px;
       width: 100%;
       background-color: $first-color;
-      display: flex;
       align-items: center;
-      justify-content: space-between;
-      position: relative;
-      .input-form--text{
-        height: 100%;
-        width: 100%;
-        padding: 0px 10px;
-        border: none;
+      .new_message{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #d2d2d2;
+        .input-form{
+          height: 50px;
+          width: 100%;
+          background-color: $first-color;
+          display: flex;
+          position: relative;
+          align-items: center;
+          .input-form--text{
+            height: 50px;
+            width: 100%;
+            padding: 0px 10px;
+            border: none;
+          }
+          .input-form--label{
+            position: absolute;
+            right: 10px;
+            .input-form--image{
+              height: 0;
+              width: 0;
+              padding: 0;
+            }
+          }
+        }
+        .form--btn{
+          height: 50px;
+          width: 72px;
+          border:solid 1px $second-color;
+          color: $first-color;
+          background-color: $second-color;
+          margin-left: 15px;
+          cursor: pointer;
+        }
       }
-      .input-form--label{
-        position: absolute;
-        right: 10px;
-      }
-      .input-form--image{
-        height: 0;
-        width: 0;
-        padding: 0;
-      }
-    }
-    &__btn{
-      height: 50px;
-      width: 72px;
-      border:solid 1px $second-color;
-      color: $first-color;
-      background-color: $second-color;
-      margin-left: 15px;
-      cursor: pointer;
     }
   }
 }
