@@ -10,8 +10,7 @@
     = link_to "#", class: "main-chat__group-info__btn" do
       Edit
   .main-chat__message-list
-    .main-chat__message-list__detail
-      = render @messages
+    = render @messages
   .main-chat__message-form
     .main-chat__message-form__input--form
       = form_for [@group, @message] do |f|
