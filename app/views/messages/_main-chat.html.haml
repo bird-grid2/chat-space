@@ -2,33 +2,21 @@
   .main-chat__group-info
     .main-chat__group-info__content
       .main-chat__group-info__content--name
-        %p
-          test
-      .main-chat__group-info__content--member
-        %p
-          member: yoshipon
-    = link_to "#", class: "main-chat__group-info__btn" do
+        = @group.name
+      %p.main-chat__group-info__content--member
+        Member:
+        - @group.users.each do |group|
+          = group.name
+    = link_to edit_group_path(@group), class: "main-chat__group-info__btn" do
       Edit
   .main-chat__message-list
-    .main-chat__message-list__detail
-      .main-chat__message-list__detail__content
-        .main-chat__message-list__detail__content--name
-          yoshipon
-        .main-chat__message-list__detail__content--time
-          2020/3/16(Mon) 22:41:05   
-      .main-chat__message-list__detail--message
-        疲れたー
-      .main-chat__message-list__detail__content
-        .main-chat__message-list__detail__content--name
-          yoshipon
-        .main-chat__message-list__detail__content--time
-          2020/3/16(Mon) 23:55:30   
-      .main-chat__message-list__detail--message
-        みんな、もう寝ちゃったの？
+    = render @messages
   .main-chat__message-form
-    .main-chat__message-form__input-form
-      %input{type: "text", name: "message", placeholder: "type a message", class: "input-form--text"}
-      %label{for: "label1", class: "input-form--label"}
-        = icon('fas', 'image', class: "fa-lg")
-        %input{type: "file", id: "label1", class: "input-form--image"}
-    %input{type: "submit", value: "Send",class: "main-chat__message-form__btn"}
+    .main-chat__message-form__input--form
+      = form_for [@group, @message] do |f|
+        .input-form 
+          = f.text_field :content, placeholder: "type a message", class: "input-form--text"
+          = f.label :image, class: "input-form--label" do
+            = icon('fas', 'image', class: "fa-lg")
+            = f.file_field :image, class: "input-form--image"
+        = f.submit "Send", class: "form--btn"
