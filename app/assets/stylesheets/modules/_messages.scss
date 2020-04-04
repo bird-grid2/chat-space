@@ -80,6 +80,7 @@ $fourth-color: #999999;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     background-color: #fafafa;
+    overflow: scroll;
     &__detail{
       padding: 35px 0px  0px 40px;
       &__content{
