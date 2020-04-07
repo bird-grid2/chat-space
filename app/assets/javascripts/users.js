@@ -1,6 +1,6 @@
 $(function(){
 
-  function buildHTML(user){
+  function addMemberHTML(user){
     var html = `
               <div class ='chat-group-user clearfix'>
                 <p class='chat-group-user__name'>${user.name}</p>
@@ -41,7 +41,7 @@ $(function(){
       $('#user-search-result').empty();
       if (users.length !== 0){
         users.forEach(function(user){
-          buildHTML(user);
+          addMemberHTML(user);
         });
       } else if (input.length == 0){
         return false;
