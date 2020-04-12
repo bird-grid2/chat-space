@@ -1,9 +1,9 @@
 require 'capistrano/setup'
-require 'capstirano/deploy'
-require 'capstirano/rbenv'
-require 'capstirano/bundler'
-require 'capstirano/rails/assets'
-require 'capstirano/rails/migrations'
-require 'capstirano3/unicorn'
+require 'capistrano/deploy'
+require 'capistrano/rbenv'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
+require 'capistrano3/unicorn'
 
-Dir.glob('lib/capstirano/tasks/*.rake').each { |r| import r }
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
