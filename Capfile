@@ -1,4 +1,4 @@
-require 'capistirano/setup'
+require 'capistrano/setup'
 require 'capstirano/deploy'
 require 'capstirano/rbenv'
 require 'capstirano/bundler'
